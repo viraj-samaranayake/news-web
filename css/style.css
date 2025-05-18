@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.site-header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  float: left;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Featured Article */
+.featured-article {
+  background: white;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.featured-article img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Article Grid */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.article-grid article {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.article-grid img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Footer */
+.site-footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+
+
+
+
+
+/* Article Detail Page */
+.article-detail {
+  margin-top: 2rem;
+}
+
+.article-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-detail .meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.article-detail img {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.article-detail p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+
+
+
+
+
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .main-nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    float: right;
+  }
+
+  .logo {
+    float: none;
+  }
+
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
